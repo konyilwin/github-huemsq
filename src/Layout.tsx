@@ -16,7 +16,6 @@ export default function Layout() {
       </nav>
 
       <hr />
-
       <Outlet />
     </div>
   );
