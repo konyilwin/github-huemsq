@@ -1,17 +1,11 @@
-import * as React from "react";
-import {
-  Routes,
-  Route,
-  Link,
-  useLocation
-} from "react-router-dom";
-import "@reach/dialog/styles.css";
-
-import Modal from "./Modal";
-import ImageView from "./ImageView";
-import Gallery from "./Gallery";
-import Layout from "./Layout";
-import Home from "./Home";
+import * as React from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import Modal from './Modal';
+import ImageView from './ImageView';
+import Gallery from './Gallery';
+import Layout from './Layout';
+import Home from './Home';
+import NoMatch from './NoMatch';
 
 export default function App() {
   let location = useLocation();
@@ -39,19 +33,6 @@ export default function App() {
           <Route path="/img/:id" element={<Modal />} />
         </Routes>
       )}
-    </div>
-  );
-}
-
-
-
-function NoMatch() {
-  return (
-    <div>
-      <h2>Nothing to see here!</h2>
-      <p>
-        <Link to="/">Go to the home page</Link>
-      </p>
     </div>
   );
 }
